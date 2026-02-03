@@ -1,12 +1,21 @@
 # File Description
+### Binance Spot Data (1m)
 
-## binance/raw --> data from Binance.us
-  [BTCUSDT_1m_20230301_20230321.csv](data/binance/raw/BTCUSDT_1m_20230301_20230321.csv): data for BTC/USDC, freq = every minute, date: 2023.03.01 - 2023.03.21
-  BTCUSDT_1m_20230301_20230321.csv: data for BTC/USDT, freq = every minute, date: 2023.03.01 - 2023.03.21
-  BTCUSD_1m_20230301_20230321.csv: data for BTC/USD, freq = every minute, date: 2023.03.01 - 2023.03.21
-  metadata_range_1m_20230301_20230321.csv: description of the above files
+- **[BTCUSDT_1m_20230301_20230321.csv](data/binance/raw/BTCUSDT_1m_20230301_20230321.csv)**  
+  Exchange: Binance.US  
+  Frequency: 1 minute  
+  Date Range (UTC): 2023-03-01 to 2023-03-21  
 
-##
+- **[BTCUSDC_1m_20230301_20230321.csv](data/binance/raw/BTCUSDC_1m_20230301_20230321.csv)**  
+  Exchange: Binance.US  
+  Frequency: 1 minute  
+  Date Range (UTC): 2023-03-01 to 2023-03-21  
 
+- **[BTCUSD_1m_20230301_20230321.csv](data/binance/raw/BTCUSD_1m_20230301_20230321.csv)**  
+  Exchange: Binance.US  
+  Frequency: 1 minute  
+  Date Range (UTC): 2023-03-01 to 2023-03-21  
 
+- **[Metadata file](data/binance/raw/metadata_range_1m_20230301_20230321.csv)**  
+  Describes dataset scope, frequency, time window, and exchange.
 
