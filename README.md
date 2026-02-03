@@ -19,3 +19,4 @@
 - **[Metadata file](data/binance/raw/metadata_range_1m_20230301_20230321.csv)**  
   Describes dataset scope, frequency, time window, and exchange.
 
+columns = ["timestamp","open","high","low","close","volume","count"]
