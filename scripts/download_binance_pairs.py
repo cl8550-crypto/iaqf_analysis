@@ -18,7 +18,7 @@ LIMIT = 1000
 START_DATE = "2023-03-01T00:00:00Z"
 END_DATE   = "2023-03-21T23:59:00Z"
 
-OUT_DIR = Path("data/raw")
+OUT_DIR = Path("data_binance/raw")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # =========================
