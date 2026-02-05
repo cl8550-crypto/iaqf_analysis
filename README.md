@@ -39,7 +39,11 @@
   Frequency: 1 minute  
   Date Range (UTC): 2023-03-01 to 2023-03-21  
 
-### Notes
+### 2.3_Notes_getdata
 
 - data files from Kraken following this pattern (since there's no column name written down above each column)--> columns = ["timestamp","open","high","low","close","volume","count"]
 - Raw data files should not be modified directly.
+
+### 2.5_Notes_EDA: analyze missing values
+- Examined when all three markets have simultaneous quotes. In the further EDA section, do not forget to analyze when each dataset has missing observations as a part of the stablecoin dynamics analysis.
+
