@@ -8,7 +8,7 @@ This repository contains the data and code supporting our IAQF 2026 paper on sta
 
 | Paper Section | Folder | Description |
 |---|---|---|
-| 2. Cross-Currency Basis | `Cross_Currency_Basis/` | Computes and analyzes the cross-currency basis |
+| 2. Cross-Currency Basis | `cross_currency_basis/` | Computes and analyzes the cross-currency basis |
 | 3. Stablecoin Dynamics | `stablecoin_dynamics/` | Core stablecoin basis analysis (also supplies data for Section 2) |
 | 4. Liquidity and Fragmentation | `liquidity/` | Exchange-level liquidity and market fragmentation |
 
@@ -28,7 +28,7 @@ iaqf_analysis/
 │       ├── binance_code.ipynb
 │       ├── kraken_code.ipynb
 │       └── comparison_analysis_code.ipynb
-├── Cross_Currency_Basis/     # Section 2 code
+├── cross_currency_basis/     # Section 2 code
 └── liquidity/                # Section 4 code
 ```
 
@@ -42,9 +42,9 @@ Raw 1-minute spot OHLCV data for three BTC trading pairs across two exchanges, c
 
 | File | Pair | Date Range (UTC) |
 |---|---|---|
-| `BTCUSDT_1m_20230301_20230321.csv` | BTC/USDT | 2023-03-01 to 2023-03-21 |
-| `BTCUSDC_1m_20230301_20230321.csv` | BTC/USDC | 2023-03-01 to 2023-03-21 |
-| `BTCUSD_1m_20230301_20230321.csv` | BTC/USD | 2023-03-01 to 2023-03-21 |
+| `btcusdt_1m_20230301_20230321.csv` | BTC/USDT | 2023-03-01 to 2023-03-21 |
+| `btcusdc_1m_20230301_20230321.csv` | BTC/USDC | 2023-03-01 to 2023-03-21 |
+| `btcusd_1m_20230301_20230321.csv` | BTC/USD | 2023-03-01 to 2023-03-21 |
 | `metadata_range_1m_20230301_20230321.csv` | — | Dataset metadata (pairs, interval, exchange) |
 
 Columns: `open_time, open, high, low, close, volume`
@@ -53,9 +53,9 @@ Columns: `open_time, open, high, low, close, volume`
 
 | File | Pair | Date Range (UTC) |
 |---|---|---|
-| `BTCUSDT_1m_20230301_20230321.csv` | BTC/USDT | 2023-01-01 to 2023-03-31 |
-| `BTCUSDC_1m_20230301_20230321.csv` | BTC/USDC | 2023-01-01 to 2023-03-31 |
-| `BTCUSD_1m_20230301_20230321.csv` | BTC/USD | 2023-01-01 to 2023-03-31 |
+| `btcusdt_1m_20230301_20230321.csv` | BTC/USDT | 2023-01-01 to 2023-03-31 |
+| `btcusdc_1m_20230301_20230321.csv` | BTC/USDC | 2023-01-01 to 2023-03-31 |
+| `btcusd_1m_20230301_20230321.csv` | BTC/USD | 2023-01-01 to 2023-03-31 |
 
 Kraken files have no header row. Columns (by position): `timestamp, open, high, low, close, volume, count`
 
@@ -71,7 +71,7 @@ Downloads 1-minute kline data from the Binance.US REST API for BTC/USDT, BTC/USD
 
 ---
 
-## Section 2 — Cross-Currency Basis (`Cross_Currency_Basis/`)
+## Section 2 — Cross-Currency Basis (`cross_currency_basis/`)
 
 Code for the **Cross-Currency Basis** section of the paper. Uses the same 1-minute spot price data from `data/` (also used by Section 3) to construct and analyze the cross-currency basis between stablecoin and fiat BTC markets.
 
