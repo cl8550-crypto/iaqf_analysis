@@ -113,3 +113,5 @@ Same pipeline as `binance_code.ipynb` applied to **Kraken** data. Covers the ide
 ## Section 4 — Liquidity and Fragmentation (`liquidity/`)
 
 Code for the **Liquidity and Fragmentation** section of the paper. Analyzes exchange-level liquidity conditions and market fragmentation across stablecoin trading pairs.
+
+> **Note:** The data used for this section is **not included in this repository** because the file sizes are too large to push to GitHub.
