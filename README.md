@@ -19,13 +19,13 @@ This repository contains the data and code supporting our IAQF 2026 paper on sta
 ```
 iaqf_analysis/
 ├── data/
-│   ├── binance/raw/          # Binance.US 1-min spot OHLCV data
+│   ├── binance.us/raw/       # Binance.US 1-min spot OHLCV data
 │   └── kraken/raw/           # Kraken 1-min spot OHLCV data
 ├── scripts/
 │   └── download_binance_pairs.py
 ├── stablecoin_dynamics/
 │   └── code/
-│       ├── binance_code.ipynb
+│       ├── binance.us_code.ipynb
 │       ├── kraken_code.ipynb
 │       └── comparison_analysis_code.ipynb
 ├── cross_currency_basis/     # Section 2 code
@@ -38,7 +38,7 @@ iaqf_analysis/
 
 Raw 1-minute spot OHLCV data for three BTC trading pairs across two exchanges, covering the Silicon Valley Bank / USDC depeg stress period.
 
-### Binance.US (`data/binance/raw/`)
+### Binance.US (`data/binance.us/raw/`)
 
 | File | Pair | Date Range (UTC) |
 |---|---|---|
@@ -67,7 +67,7 @@ Kraken files have no header row. Columns (by position): `timestamp, open, high, 
 
 ### `download_binance_pairs.py`
 
-Downloads 1-minute kline data from the Binance.US REST API for BTC/USDT, BTC/USDC, and BTC/USD. Handles rate limiting (HTTP 429) and server errors with exponential backoff. Saves one CSV per pair plus a metadata file to `data/binance/raw/`.
+Downloads 1-minute kline data from the Binance.US REST API for BTC/USDT, BTC/USDC, and BTC/USD. Handles rate limiting (HTTP 429) and server errors with exponential backoff. Saves one CSV per pair plus a metadata file to `data/binance.us/raw/`.
 
 ---
 
@@ -81,7 +81,7 @@ Code for the **Cross-Currency Basis** section of the paper. Uses the same 1-minu
 
 Code and figures for the **Stablecoin Dynamics** section. The data in `data/` was collected for this section and is shared with Section 2.
 
-### `stablecoin_dynamics/code/binance_code.ipynb`
+### `stablecoin_dynamics/code/binance.us_code.ipynb`
 
 Processes and analyzes **Binance.US** data. Runs the full stablecoin basis pipeline for the Binance exchange:
 
@@ -97,11 +97,11 @@ Processes and analyzes **Binance.US** data. Runs the full stablecoin basis pipel
 
 ### `stablecoin_dynamics/code/kraken_code.ipynb`
 
-Same pipeline as `binance_code.ipynb` applied to **Kraken** data. Covers the identical sequence of analyses (Sections 1.1–3.2) for the Kraken exchange, enabling direct comparison of results.
+Same pipeline as `binance.us_code.ipynb` applied to **Kraken** data. Covers the identical sequence of analyses (Sections 1.1–3.2) for the Kraken exchange, enabling direct comparison of results.
 
 ### `stablecoin_dynamics/code/comparison_analysis_code.ipynb`
 
-**Cross-exchange comparison** notebook. Imports outputs from both `binance_code.ipynb` and `kraken_code.ipynb` and runs:
+**Cross-exchange comparison** notebook. Imports outputs from both `binance.us_code.ipynb` and `kraken_code.ipynb` and runs:
 
 - **4.1 Cross-exchange basis gap** — `Δ_s(t) = Basis_{s,Binance}(t) − Basis_{s,Kraken}(t)` for USDT and USDC; summary statistics (mean, std, p95, p99, max in bps); time-series plot saved as `fig_gap_timeseries.png`
 - **4.2 Lead–lag analysis** — cross-correlation at lags −60 to +60 minutes to determine which exchange prices stablecoin risk first; plot saved as `fig_leadlag_crosscorr.png`
